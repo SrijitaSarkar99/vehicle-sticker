@@ -19,13 +19,16 @@ class NonTechesController < ApplicationController
   def edit
   end
 
+  def success
+  end
+
   # POST /non_teches or /non_teches.json
   def create
     @non_tech = NonTech.new(non_tech_params)
 
     respond_to do |format|
       if @non_tech.save
-        format.html { redirect_to non_tech_url(@non_tech), notice: "Non tech was successfully created." }
+        format.html { render :success, notice: "Non tech was successfully created." }
         format.json { render :show, status: :created, location: @non_tech }
       else
         format.html { render :new, status: :unprocessable_entity }
