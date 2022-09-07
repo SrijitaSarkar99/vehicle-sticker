@@ -1,6 +1,9 @@
+
+
+<div class="container w-50">
 <%= form_with(model: student) do |form| %>
   <% if student.errors.any? %>
-    <div style="color: red">
+    <div style="color: red" class="mb-3">
       <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
@@ -12,45 +15,46 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, style: "display: block" ,class:"form-label" %>
+    <%= form.text_field :name,class:"form-control" %>
   </div>
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :department, style: "display: block" %>
-    <%= form.text_field :department %>
+    <%= form.text_field :department ,class:"form-control"%>
   </div>
 
   <div>
     <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :roll_no, style: "display: block" %>
-    <%= form.text_field :roll_no %>
+    <%= form.text_field :roll_no,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :vehicle_no, style: "display: block" %>
-    <%= form.text_field :vehicle_no %>
+    <%= form.text_field :vehicle_no,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :adhar_no, style: "display: block" %>
-    <%= form.text_field :adhar_no %>
+    <%= form.text_field :adhar_no,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :license, style: "display: block" %>
-    <%= form.text_field :license %>
+    <%= form.text_field :license,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div >
+    <%= form.submit class:"btn btn-primary"  %>
   </div>
 <% end %>
+</div>
