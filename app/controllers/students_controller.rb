@@ -57,6 +57,9 @@ class StudentsController < ApplicationController
     end
   end
 
+  def success
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
@@ -67,4 +70,5 @@ class StudentsController < ApplicationController
     def student_params
       params.require(:student).permit(:name, :email, :department, :phone, :roll_no, :vehicle_no, :adhar_no, :license)
     end
+
 end

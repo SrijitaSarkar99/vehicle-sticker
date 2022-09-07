@@ -1,0 +1,59 @@
+<div class="w-50 container">
+<%= form_with(model: teacher) do |form| %>
+  <% if teacher.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+
+      <ul>
+        <% teacher.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3 form-group">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :email,"Email Address", style: "display: block" %>
+    <%= form.text_field :email, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :department,"Department Name", style: "display: block" %>
+    <%= form.text_field :department, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :phone,"Mobile No.", style: "display: block" %>
+    <%= form.text_field :phone, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :faculty_no,"Faculty No.", style: "display: block" %>
+    <%= form.text_field :faculty_no, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :adhar_no,"Aadhar No.", style: "display: block" %>
+    <%= form.text_field :adhar_no, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :vehicle_no,"Vehicle Registration No.", style: "display: block" %>
+    <%= form.text_field :vehicle_no, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :license_no,"Driving License No.", style: "display: block" %>
+    <%= form.text_field :license, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 d-flex justify-content-center w-100">
+    <%= form.submit "Make Request", class:"btn btn-success" %>
+  </div>
+<% end %>
+</div>
