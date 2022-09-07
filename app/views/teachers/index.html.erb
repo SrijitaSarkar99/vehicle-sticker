@@ -23,6 +23,17 @@
       <% @teachers.each do |teacher| %>
        
         <tr>
+
+    <td><%= link_to teacher.name, teacher %></td>
+          <td><%= teacher.email %></td>
+          <td><%= teacher.phone %></td>
+          <td><%= teacher.department %></td>
+          <td><%= teacher.faculty_no %></td>
+          <td><%= teacher.vehicle_no %></td>
+          <td><%= teacher.adhar_no %></td>
+          <td><%= teacher.license %></td>
+          
+
           <td>
 <%= link_to teacher.name, teacher %>
 
