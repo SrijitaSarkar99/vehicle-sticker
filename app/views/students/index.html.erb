@@ -29,18 +29,22 @@
 
           </td>
           
-          <td><%= student.email %></td>
-          <td><%= student.phone %></td>
-          <td><%= student.department %></td>
-          <td><%= student.roll_no %></td>
-          <td><%= student.vehicle_no %></td>
-          <td><%= student.adhar_no %></td>
-          <td><%= student.license %></td>
+    <% if student.aadhar_img.attached? %>
+      <%= image_tag student.aadhar_img ,style:"width:200px"%>
+      <%end%>
+    
+        <% if student.license_img.attached? %>
+      <%= image_tag student.license_img ,style:"width:200px" %>
+      <%end%>
           
-          
-          
-          
-          
+            <% if student.license_img.attached? %>
+      <%= image_tag student.photo ,style:"width:200px" %>
+      <%end%>
+
+        <% if student.license_img.attached? %>
+      <%= image_tag student.registration_img  ,style:"width:200px"%>
+      <%end%>
+  
           
           <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
           

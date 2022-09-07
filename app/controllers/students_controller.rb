@@ -19,13 +19,16 @@ class StudentsController < ApplicationController
   def edit
   end
 
+  def success
+  end
+
   # POST /students or /students.json
   def create
     @student = Student.new(student_params)
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to student_url(@student), notice: "Student was successfully created." }
+        format.html { render :success, notice: "Student was successfully created." }
         format.json { render :show, status: :created, location: @student }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -68,7 +71,7 @@ class StudentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def student_params
-      params.require(:student).permit(:name, :email, :department, :phone, :roll_no, :vehicle_no, :adhar_no, :license)
+      params.require(:student).permit(:name, :email, :department, :phone, :roll_no, :vehicle_no, :adhar_no, :license, :aadhar_img, :license_img, :photo, :registration_img)
     end
 
 end
