@@ -1,14 +1,67 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Teachers</h1>
+<h1>teachers</h1>
+
 
 <div id="teachers">
-  <% @teachers.each do |teacher| %>
-    <%= render teacher %>
-    <p>
-      <%= link_to "Show this teacher", teacher %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Phone</th>
+        <th>Rollno</th>
+        <th>vehicle_no</th>
+        <th>adhar_no</th>
+        <th>license</th>
+        <th> </th>
+      </tr>
+    </thead>
 
-<%= link_to "New teacher", new_teacher_path %>
+    <tbody>
+      <% @teachers.each do |teacher| %>
+       
+        <tr>
+
+    <td><%= link_to teacher.name, teacher %></td>
+          <td><%= teacher.email %></td>
+          <td><%= teacher.phone %></td>
+          <td><%= teacher.department %></td>
+          <td><%= teacher.faculty_no %></td>
+          <td><%= teacher.vehicle_no %></td>
+          <td><%= teacher.adhar_no %></td>
+          <td><%= teacher.license %></td>
+          
+
+          <td>
+<%= link_to teacher.name, teacher %>
+
+
+          </td>
+          
+    <% if teacher.aadhar_img.attached? %>
+      <%= image_tag teacher.aadhar_img ,style:"width:200px"%>
+      <%end%>
+    
+        <% if teacher.license_img.attached? %>
+      <%= image_tag teacher.license_img ,style:"width:200px" %>
+      <%end%>
+          
+            <% if teacher.license_img.attached? %>
+      <%= image_tag teacher.photo ,style:"width:200px" %>
+      <%end%>
+
+        <% if teacher.license_img.attached? %>
+      <%= image_tag teacher.registration_img ,style:"width:200px" %>
+      <%end%>
+  
+          
+          <td><%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+       
+      <% end %>
+    </tbody>
+  </table>
+</div>

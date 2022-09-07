@@ -39,4 +39,20 @@
     <%= teacher.license %>
   </p>
 
+  <% if teacher.aadhar_img.attached? %>
+      <%= image_tag teacher.aadhar_img %>
+    <%end%>
+
+    <% if teacher.license_img.attached? %>
+      <%= image_tag teacher.license_img %>
+    <%end%>
+
+    <% if teacher.photo.attached? %>
+      <%= image_tag teacher.photo %>
+    <%end%>
+
+    <% if teacher.registration_img.attached? %>
+      <%= image_tag teacher.registration_img %>
+    <%end%>
+
 </div>

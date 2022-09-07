@@ -1,7 +1,5 @@
-
-
 <div class="container w-50">
-<%= form_with(model: student) do |form| %>
+<%= form_with(model: student,local: true) do |form| %>
   <% if student.errors.any? %>
     <div style="color: red" class="mb-3">
       <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
@@ -14,47 +12,68 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="mb-3 form-group">
     <%= form.label :name, style: "display: block" ,class:"form-label" %>
     <%= form.text_field :name,class:"form-control" %>
   </div>
-  <div>
-    <%= form.label :email, style: "display: block" %>
+
+  <div class="mb-3 form-group">
+    <%= form.label :email,"Email Address", style: "display: block" %>
     <%= form.text_field :email,class:"form-control" %>
   </div>
 
-  <div>
+  <div class="mb-3 form-group">
     <%= form.label :department, style: "display: block" %>
     <%= form.text_field :department ,class:"form-control"%>
   </div>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
+  <div class="mb-3 form-group">
+    <%= form.label :phone,"Mobile No.", style: "display: block" %>
     <%= form.text_field :phone,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :roll_no, style: "display: block" %>
+  <div class="mb-3 form-group">
+    <%= form.label :roll_no,"Roll No.", style: "display: block" %>
     <%= form.text_field :roll_no,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :vehicle_no, style: "display: block" %>
+  <div class="mb-3 form-group">
+    <%= form.label :photo, "Upload Photo Here"%>
+    <%= form.file_field :photo, class:"form-control"%>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :vehicle_no,"Vehicle Registration No.", style: "display: block" %>
     <%= form.text_field :vehicle_no,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :adhar_no, style: "display: block" %>
+  <div class="mb-3 form-group">
+    <%= form.label :registration_img, "Upload Vehicle Registration Certificate Here"%>
+    <%= form.file_field :registration_img, class:"form-control"%>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :adhar_no,"Aadhar No.", style: "display: block" %>
     <%= form.text_field :adhar_no,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :license, style: "display: block" %>
+  <div class="mb-3 form-group">
+    <%= form.label :aadhar_img, "Upload Aadhar Here"%>
+    <%= form.file_field :aadhar_img, class:"form-control"%>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.label :license,"Driving License No.", style: "display: block" %>
     <%= form.text_field :license,class:"form-control" %>
   </div>
 
-  <div >
-    <%= form.submit class:"btn btn-primary"  %>
+  <div class="mb-3 form-group">
+    <%= form.label :license_img, "Upload Driving License Here"%>
+    <%= form.file_field :license_img, class:"form-control"%>
+  </div>
+
+  <div class="mb-3 d-flex justify-content-center">
+    <%= form.submit "Make Request", class:"btn btn-success"  %>
   </div>
 <% end %>
 </div>
