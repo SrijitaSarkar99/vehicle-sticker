@@ -1,0 +1,62 @@
+<div id="<%= dom_id non_tech %>">
+  <p>
+    <strong>Name:</strong>
+    <%= non_tech.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= non_tech.email %>
+  </p>
+
+  <p>
+    <strong>Department:</strong>
+    <%= non_tech.office %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= non_tech.phone %>
+  </p>
+
+  <p>
+    <strong>Roll no:</strong>
+    <%= non_tech.employee_no %>
+  </p>
+
+  <p>
+    <strong>Vehicle no:</strong>
+    <%= non_tech.vehicle_no %>
+  </p>
+
+  <p>
+    <strong>Adhar no:</strong>
+    <%= non_tech.adhar_no %>
+  </p>
+
+  <p>
+    <strong>License:</strong>
+    <%= non_tech.license %>
+  </p>
+
+    <% if non_tech.aadhar_img.attached? %>
+      <%= image_tag non_tech.aadhar_img %>
+    <%end%>
+
+    <% if non_tech.license_img.attached? %>
+      <%= image_tag non_tech.license_img %>
+    <%end%>
+
+    <% if non_tech.photo.attached? %>
+      <%= image_tag non_tech.photo %>
+    <%end%>
+
+    <% if non_tech.registration_img.attached? %>
+      <%= image_tag non_tech.registration_img %>
+    <%end%>
+
+
+    
+          
+
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @non_tech %>
+
+<div>
+  <%= link_to "Edit this non tech", edit_non_tech_path(@non_tech) %> |
+  <%= link_to "Back to non teches", non_teches_path %>
+
+  <%= button_to "Destroy this non tech", @non_tech, method: :delete %>
+</div>

@@ -1,0 +1,60 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>non_teches</h1>
+
+
+<div id="non_teches">
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Phone</th>
+        <th>Rollno</th>
+        <th>vehicle_no</th>
+        <th>adhar_no</th>
+        <th>license</th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @non_teches.each do |non_tech| %>
+       
+        <tr>
+          <td><%= link_to non_tech.name, non_tech %></td>
+          <td><%= non_tech.email %></td>
+          <td><%= non_tech.phone %></td>
+          <td><%= non_tech.office %></td>
+          <td><%= non_tech.employee_no %></td>
+          <td><%= non_tech.vehicle_no %></td>
+          <td><%= non_tech.adhar_no %></td>
+          <td><%= non_tech.license %></td>
+          
+        <% if non_tech.aadhar_img.attached? %>
+          <%= image_tag non_tech.aadhar_img ,style:"width:200px"%>
+        <%end%>
+    
+        <% if non_tech.license_img.attached? %>
+          <%= image_tag non_tech.license_img ,style:"width:200px" %>
+        <%end%>
+          
+        <% if non_tech.license_img.attached? %>
+          <%= image_tag non_tech.photo ,style:"width:200px" %>
+        <%end%>
+
+        <% if non_tech.license_img.attached? %>
+          <%= image_tag non_tech.registration_img  ,style:"width:200px"%>
+        <%end%>
+  
+          
+        <td><%= link_to 'Delete', non_tech, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+       
+      <% end %>
+    </tbody>
+  </table>
+</div>
