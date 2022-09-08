@@ -29,7 +29,7 @@
 
   <div class="mb-3 form-group">
     <%= form.label :phone,"Mobile No.", style: "display: block" %>
-    <%= form.text_field :phone,class:"form-control" ,required:true%>
+    <%= form.text_field :phone,class:"form-control" ,required:true,maxlength:10%>
   </div>
 
   <div class="mb-3 form-group">
@@ -54,7 +54,7 @@
 
   <div class="mb-3 form-group">
     <%= form.label :adhar_no,"Aadhar No.", style: "display: block" %>
-    <%= form.text_field :adhar_no,class:"form-control" ,required:true%>
+    <%= form.text_field :adhar_no,class:"form-control" ,required:true,maxlength:12%>
   </div>
 
   <div class="mb-3 form-group">
