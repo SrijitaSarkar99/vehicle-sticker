@@ -14,62 +14,62 @@
 
   <div class="mb-3 form-group">
     <%= form.label :name, style: "display: block" ,class:"form-label" %>
-    <%= form.text_field :name,class:"form-control" %>
+    <%= form.text_field :name,class:"form-control",required:true %>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :email,"Email Address", style: "display: block" %>
-    <%= form.text_field :email,class:"form-control" %>
+    <%= form.text_field :email,class:"form-control",required:true %>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :office, style: "display: block" %>
-    <%= form.text_field :office ,class:"form-control"%>
+    <%= form.text_field :office ,class:"form-control",required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :phone,"Mobile No.", style: "display: block" %>
-    <%= form.text_field :phone,class:"form-control" %>
+    <%= form.text_field :phone,class:"form-control" ,required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :employee_no,"Employee No.", style: "display: block" %>
-    <%= form.text_field :employee_no,class:"form-control" %>
+    <%= form.text_field :employee_no,class:"form-control" ,required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :photo, "Upload Photo Here"%>
-    <%= form.file_field :photo, class:"form-control"%>
+    <%= form.file_field :photo, class:"form-control",required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :vehicle_no,"Vehicle Registration No.", style: "display: block" %>
-    <%= form.text_field :vehicle_no,class:"form-control" %>
+    <%= form.text_field :vehicle_no,class:"form-control" ,required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :registration_img, "Upload Vehicle Registration Certificate Here"%>
-    <%= form.file_field :registration_img, class:"form-control"%>
+    <%= form.file_field :registration_img, class:"form-control",required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :adhar_no,"Aadhar No.", style: "display: block" %>
-    <%= form.text_field :adhar_no,class:"form-control" %>
+    <%= form.text_field :adhar_no,class:"form-control" ,required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :aadhar_img, "Upload Aadhar Here"%>
-    <%= form.file_field :aadhar_img, class:"form-control"%>
+    <%= form.file_field :aadhar_img, class:"form-control",required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :license,"Driving License No.", style: "display: block" %>
-    <%= form.text_field :license,class:"form-control" %>
+    <%= form.text_field :license,class:"form-control" ,required:true%>
   </div>
 
   <div class="mb-3 form-group">
     <%= form.label :license_img, "Upload Driving License Here"%>
-    <%= form.file_field :license_img, class:"form-control"%>
+    <%= form.file_field :license_img, class:"form-control",required:true%>
   </div>
 
   <div class="mb-3 d-flex justify-content-center">
