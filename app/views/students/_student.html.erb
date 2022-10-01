@@ -1,10 +1,14 @@
 <div id="<%= dom_id student %>">
-  <p>
-    <strong>Name:</strong>
-    <%= student.name %>
-  </p>
-
-  <p>
+   
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <p>
+      <strong>Name:</strong>
+      <%= student.name %>
+      </p>
+    </h1>
+    <p>
     <strong>Email:</strong>
     <%= student.email %>
   </p>
@@ -38,25 +42,54 @@
     <strong>License:</strong>
     <%= student.license %>
   </p>
+  </div>
 
-    <% if student.aadhar_img.attached? %>
-      <%= image_tag student.aadhar_img %>
+  <p class="p-5">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">AADHAR</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">LICENSE</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">PHOTO</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">REGISTRATION</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">HIDE/SHOW</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+         <% if student.aadhar_img.attached? %>
+      <%= image_tag student.aadhar_img ,class:"img-fluid"  %>
     <%end%>
-
-    <% if student.license_img.attached? %>
-      <%= image_tag student.license_img %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+       <% if student.license_img.attached? %>
+      <%= image_tag student.license_img ,class:"img-fluid"  %>
     <%end%>
-
-    <% if student.photo.attached? %>
-      <%= image_tag student.photo %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+        <% if student.photo.attached? %>
+      <%= image_tag student.photo ,class:"img-fluid" %>
     <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample4">
+      <div class="card card-body">
+        <% if student.registration_img.attached? %>
+          <%= image_tag student.registration_img ,class:"img-fluid" %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>   
 
-    <% if student.registration_img.attached? %>
-      <%= image_tag student.registration_img %>
-    <%end%>
 
-
-    
-          
-
+</div>
 </div>
